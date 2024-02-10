@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: wheat;
+}
+
+#pt {
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    margin: 30px;
+    border: 1px dashed rgba(165, 42, 42, 0.615);
+}
+
+#game {
+    background-color: rgb(0, 215, 0);
+    width: 400px;
+    height: 600px;
+    margin: auto;
+    border: 1px solid white;
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.337);
+}
+
+#agua {
+    position: relative;
+    background-image: url(../imagens/agua-poca.jpg);
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border-radius: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.071);
+    top: 0px;
+
+    animation: agua 1.8s infinite linear;
+}
+
+@keyframes agua {
+    0%{top: 0px;}
+    100%{top: 520px;}
+}
+
+#sapo {
+    position: relative;
+    background-color: rgba(144, 238, 144, 0.111);
+    background-image: url(../imagens/sapinho.png);
+    background-size: cover;
+    width: 95px;
+    height: 70px;
+    margin: auto;
+    top: 430px;
+}
+
+.animar {
+    animation: sapo 0.8s linear;
+}
+
+@keyframes sapo {
+    0%{top: 430px;}
+    10%{top: 423px; width: 95px; height: 70px;}
+    20%{top: 416px; width: 97px; height: 72px;}
+    30%{top: 409px; width: 99px; height: 74px;}
+    40%{top: 402px; width: 101px; height: 76px;}
+    50%{top: 395px; width: 103px; height: 78px;}
+    60%{top: 390px; width: 105px; height: 80px;}
+    70%{top: 400px; width: 103px; height: 78px;}
+    80%{top: 415px; width: 99px; height: 76px;}
+    90%{top: 425px; width: 97px; height: 70px;}
+    100%{top: 430px;}
+}
