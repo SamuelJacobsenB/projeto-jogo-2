@@ -1,21 +1,27 @@
 let sapo = document.querySelector('#sapo')
 let agua = document.querySelector('#agua')
 let pt = document.querySelector('#pontos')
-pt.value = 0
-var pontuacao = pt.value
+pt.innerHTML = 0
+let pontuacao = 0
 
-
+agua.classList.add('animar_agua_0')
 
 function pular(){
-    if(sapo.classList != 'animar'){
-        sapo.classList.add('animar')
+    if(sapo.classList != 'animar_sapo'){
+        sapo.classList.add('animar_sapo')
     }
 
+
     setTimeout(()=>{
-        sapo.classList.remove('animar')
+        sapo.classList.remove('animar_sapo')
     }, 800)
 }
 
+
+var aumentarPontuacao = setInterval((evt)=>{
+    pontuacao += 10
+    pt.innerHTML = pontuacao
+}, 1000)
 
 var testarColisao = setInterval(()=>{
 
@@ -35,5 +41,20 @@ var testarColisao = setInterval(()=>{
 
 }, 10)
 
+var testarVitória = setInterval(()=>{
 
-pt.innerHTML = pontuacao
+    var topoSapo = parseInt(
+        window.getComputedStyle(sapo).getPropertyValue('top')
+    )
+    
+    var topoAgua = parseInt(
+        window.getComputedStyle(agua).getPropertyValue('top')
+    )
+
+    if(pontuacao == 1000){
+        agua.style.animation = 'none'
+        sapo.style.diaplay = 'none'
+        alert('Você Ganhou.')
+    }
+
+}, 500)

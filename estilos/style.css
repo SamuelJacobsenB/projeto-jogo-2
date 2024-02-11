@@ -35,8 +35,26 @@ body {
     border-radius: 40px;
     border: 1px solid rgba(0, 0, 0, 0.071);
     top: 0px;
+}
 
+.animar_agua_0 {
     animation: agua 1.8s infinite linear;
+}
+
+.animar_agua_1 {
+    animation: agua 1.6s infinite linear;
+}
+
+.animar_agua_2 {
+    animation: agua 1.4s infinite linear;
+}
+
+.animar_agua_3 {
+    animation: agua 1.2s infinite linear;
+}
+
+.animar_agua_4 {
+    animation: agua 1s infinite linear;
 }
 
 @keyframes agua {
@@ -55,7 +73,7 @@ body {
     top: 430px;
 }
 
-.animar {
+.animar_sapo {
     animation: sapo 0.8s linear;
 }
 
